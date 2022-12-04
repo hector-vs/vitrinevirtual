@@ -1,0 +1,351 @@
+@charset "UTF-8"; 
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root {
+    --cor0: #ffffff;
+    --cor1: #d3dacd;
+    --cor2: #C0BAB1;
+    --cor3: #8D877E;
+    --cor4: #5B534D;
+    --cor5: #28201B;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor1);
+    font-family: 'PT Sans', sans-serif;
+}
+
+img#logo {
+    display: block;
+    margin: auto;
+}
+
+header {
+    background-color: var(--cor3);
+    height: 90px;
+    padding-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor5);
+    transition: 0.2s;
+}
+
+nav {
+    height: 45px;
+    background-color: var(--cor2);
+}
+
+nav > ul > li {
+    font-family: 'PT Sans', serif;
+    font-size: 1.2em;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: 0.1s;
+}
+
+@media (max-width: 500px) {
+    nav > ul > li {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav > ul > li:hover {
+    padding-top: 7px;
+    font-size: 1.4em;
+}
+
+a:hover {
+    color: rgb(96, 151, 96);
+}
+
+.linha {
+    background-color: var(--cor4);
+    margin: auto;
+    height: 2px;
+    border-radius: 2px;
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+.atual {
+    font-weight: 600;
+    color: rgb(96, 151, 96);
+}
+ span > a {
+    color: rgb(96, 151, 96);
+ }
+
+ main {
+   margin: auto;
+   min-width: 300px;
+   max-width: 1000px;
+ }
+
+ main.sobremain {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto; 
+    display: flex;  
+    flex-direction: column;
+    /* background-color: rgba(255, 0, 179, 0.055); */
+    padding: 20px 10px 20px 10px;
+ }
+
+ #divcharrete {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+ }
+
+ #charrete {
+    display: block;
+    max-width: 580px;
+    min-width: 200px;
+    border: 5px solid rgb(78, 35, 0);
+ }
+
+ .legenda {
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--cor4);
+ }
+
+ h2{
+    text-align: center;
+    color: var(--cor5);
+    margin-bottom: 10px;
+ }
+
+ h1{
+    text-align: center;
+    color: var(--cor5);
+    margin-bottom: 30px;
+ }
+
+ .enfase {
+    color: rgb(45, 129, 45);
+ }
+
+ p {
+    text-align: justify;
+    text-indent: 30px;
+ }
+
+ /*----------------------LOGIN------------------------*/
+
+ #body-index{
+   overflow-y: hidden;
+ }
+
+ .avisologin{
+   text-indent: 0px;
+   font-size: 1.2em;
+   font-weight: bold;
+   text-align: center;
+   color: var(--cor5);
+   background-color: rgb(199, 199, 86);
+   padding: 10px;
+ }
+
+ main#main-login-area {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+ }
+
+ #main-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: var(--cor3);
+    border-radius: 10px;
+
+    width: 280px;
+    height: 310px;
+ }
+
+ #main-login > img {
+    margin-top: 0px;
+
+ }
+
+ #main-login > form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+ }
+
+ #main-login > form > input {
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 230px;
+    margin-bottom: 10px;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    font-size: 1.02em;
+    padding-left: 15px;
+    transition: 0.2s;
+ }
+
+ #main-login > form > input#inputenviar, #inputcadastrar {
+   padding-left: 0px;
+   height: 45px;
+ }
+
+ #main-login > form > input:focus {
+   background-color: var(--cor4);
+   color: var(--cor2);
+ }
+
+ #main-login > form > input#inputenviar:hover, #inputcadastrar:hover {
+   background-color: rgb(63, 116, 63);
+   color: var(--cor2);
+ }
+
+ #main-login > form > input#inputenviar:active, #inputcadastrar:active {
+   background-color: rgb(63, 116, 63);
+   color: var(--cor2);
+ }
+
+ /*----------------------OBRAS------------------------*/
+
+ .pintura {
+   max-width: 100%;
+   display: block;
+   border: 4px solid #5d3f24;
+ }
+
+ .disponibilidade {
+   text-indent: 0;
+   font-size: 0.8em;
+   text-align: center;
+   color: var(--cor4);
+ }
+
+ .flex {
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   max-width: 950px;
+ }
+
+ .flex > div.bloco {
+   flex: 1 1 150px;
+   margin: 10px;
+ }
+
+ /*-----------------Não Logado-----------------*/
+ .flex-center-content {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+
+ .flex-center-content > img {
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ /*--------------ADMIN---------------*/
+.adminforms {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.adminforms > form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.adminforms > form > input {
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    font-size: 1.02em;
+    padding-left: 15px;
+    transition: 0.2s;
+}
+
+.adminforms > form > input:focus {
+   background-color: var(--cor4);
+   color: var(--cor2);
+ }
+
+ form > label {
+   color: var(--cor5);
+   font-weight: bold;
+   font-size: 1.2em;
+   margin-top: 10px;
+   margin-bottom: 5px;
+ }
+
+ form > select {
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    font-size: 1.02em;
+    padding-left: 15px;
+    transition: 0.2s;
+ }
+
+#botaosair{
+   background-color: rgb(231, 35, 0);
+   color: var(--cor1);
+   font-size: 1.2em;
+   font-weight: bold;
+   padding: 10px;
+   border-radius: 10px;
+   transition: 0.2s;
+}
+
+#botaosair:hover {
+   background-color: rgb(255, 144, 124);
+}
