@@ -5,8 +5,7 @@ $senha = '';
 $database = 'loginutf';
 $host = 'localhost';
 
-$mysqli = new mysqli($host, $usuario, $senha, $database);
 
-if($mysqli->error) {
-    die("Falha ao conectar ao banco de dados: " . $mysqli->error);
-}
+$mysqli = new PDO("mysql:host=$host;dbname=$database", $usuario, $senha, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+
+$mysqli->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -1,14 +1,22 @@
 <?php
     include('protect.php');
     include('conexao.php');
+    include('listar.php');
+    ini_set('default_charset','utf-8');
 
     if($_POST){
         $fotopintura = $_POST['fotopintura'];
         $nomepintura = $_POST['nomepintura'];
         $tipopintura = $_POST['tipopintura'];
         $disponibilidade = $_POST['disponibilidade'];
-        $sql_code = "INSERT INTO obras(fotopintura, nomepintura, tipopintura, disponibilidade) VALUES('$fotopintura','$nomepintura','$tipopintura','$disponibilidade')";
-        $sql_query = $mysqli->query($sql_code) or die("Falha na execução di código SQL: " . $mysqli->error);
+        $sql = "INSERT INTO obras(fotopintura, nomepintura, tipopintura, disponibilidade) VALUES('$fotopintura','$nomepintura','$tipopintura','$disponibilidade')";
+        $sql_query = $mysqli->prepare($sql);
+        $sql_query->execute() or die("Falha na execução do código SQL: " . $mysqli->error);
+    }
+
+    if(isset($_GET['delete'])){
+        $id = (int)$_GET['delete'];
+        $mysqli->exec("DELETE FROM obras WHERE id=$id");
     }
 
 ?>
@@ -46,8 +54,26 @@
                 <option value="disp">Disponível</option>
                 <option value="indisp">Indisponível</option>
             </select>
-            <input type="submit" value="cadastrar" id="inputcadastrar">
+            <input type="submit" value="Cadastrar" id="inputcadastrar">
         </form>
+        <table>
+            <tr>
+              <th>Ações</th>
+              <th>ULR da foto</th>
+              <th>Nome</th>
+              <th>Detalhes</th>
+              <th>Disponibilidade</th>
+            </tr>
+            <?php
+            foreach ($fetchObras as $key => $value){
+                echo '<tr><td><a href="?delete='.$value['id'].'">Excluir</a></td>
+                <td>'.$value['fotopintura'].'</td>
+                <td>'.$value['nomepintura'].'</td>
+                <td>'.$value['tipopintura'].'</td>
+                <td>'.$value['disponibilidade'].'</td></tr>';
+            }
+            ?>
+          </table>
         <a id="botaosair" href="logout.php">Encerrar sessão</a>
     </main>
 </body>

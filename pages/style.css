@@ -344,8 +344,30 @@ a:hover {
    padding: 10px;
    border-radius: 10px;
    transition: 0.2s;
+   margin-bottom: 40px;
 }
 
 #botaosair:hover {
    background-color: rgb(255, 144, 124);
+}
+
+table{
+   margin-top: 10px;
+   margin-bottom: 30px;
+   width: 600px;
+}
+
+table tr {
+   background-color: var(--cor4);
+   padding: 5px;
+}
+
+table tr th {
+   padding: 5px;
+   color: rgb(116, 216, 116);
+} 
+
+table tr td {
+   padding: 5px;
+   color: var(--cor1);
 }
