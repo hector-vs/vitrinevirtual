@@ -12,11 +12,13 @@
         $sql = "INSERT INTO obras(fotopintura, nomepintura, tipopintura, disponibilidade) VALUES('$fotopintura','$nomepintura','$tipopintura','$disponibilidade')";
         $sql_query = $mysqli->prepare($sql);
         $sql_query->execute() or die("Falha na execução do código SQL: " . $mysqli->error);
+        header("Location: obras.php");
     }
 
     if(isset($_GET['delete'])){
         $id = (int)$_GET['delete'];
         $mysqli->exec("DELETE FROM obras WHERE id=$id");
+        echo '<p class="exito">Obra excluída!</p>';
     }
 
 ?>
@@ -70,7 +72,13 @@
                 <td>'.$value['fotopintura'].'</td>
                 <td>'.$value['nomepintura'].'</td>
                 <td>'.$value['tipopintura'].'</td>
-                <td>'.$value['disponibilidade'].'</td></tr>';
+                <td>';
+                if($value['disponibilidade'] == "disp"){
+                    echo 'Disponível';
+                 } else {
+                    echo 'Indisponível';
+                 }
+                echo '</td></tr>';
             }
             ?>
           </table>

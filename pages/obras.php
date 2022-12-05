@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <abbr title="Hector Vieira Saldivar"><a href="#"><img id="logo" src="../imgs/logo.png" alt="assinatura" height="50px"></a></abbr>
+        <abbr title="Hector Vieira Saldivar"><a href="admin.php"><img id="logo" src="../imgs/logo.png" alt="assinatura" height="50px"></a></abbr>
     </header>
     <nav>
         <ul>
@@ -27,7 +27,9 @@
         <section class="flex">
             <?php 
                 foreach ($fetchObras as $key => $value){
-                     echo '<div class="bloco"><img src="'.$value['fotopintura'].'" class="pintura"><p class="disponibilidade">'.$value['nomepintura'].'</p><p class="disponibilidade">'.$value['tipopintura'].'</p><p class="disponibilidade">'; 
+                     echo '<div class="bloco"><img src="'.$value['fotopintura'].'" class="pintura"><span class="nomeobra">
+                         <p class="disponibilidade">'.$value['nomepintura'].'</p>
+                     </span><p class="disponibilidade">'.$value['tipopintura'].'</p><p class="disponibilidade">'; 
                      if($value['disponibilidade'] == "disp"){
                         echo 'Disponível';
                      } else {

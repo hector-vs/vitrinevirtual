@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <abbr title="Hector Vieira Saldivar"><a href="#"><img id="logo" src="../imgs/logo.png" alt="assinatura" height="50px"></a></abbr>
+        <abbr title="Hector Vieira Saldivar"><a href="admin.php"><img id="logo" src="../imgs/logo.png" alt="assinatura" height="50px"></a></abbr>
     </header>
     <nav>
         <ul>
@@ -27,7 +27,7 @@
         <p class="legenda">Releitura do quadro A Charrete, de Gergina de Albuquerque</p>
         <p class="legenda">Óleo sobre tela, 50x40 cm</p>
         <h2 style="margin-top: 30px;">Seja bem vindo à minha <span class="enfase">vitrine virtual</span>!</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore soluta atque ad dicta suscipit eligendi eius maxime possimus! Maxime natus quo pariatur maiores veniam, nostrum ducimus perspiciatis vero fuga dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis officia unde architecto doloribus et? Reprehenderit provident similique assumenda ipsum molestias voluptatem doloribus reiciendis ipsam quis, dolor dicta tempore, sed illo!</p>
+        <p>Me chamo Hector Vieira Saldivar, e comecei a estudar a pintura a óleo em 2022. Utilizo o método Alla Prima (pintura indireta) em minhas obras, obtendo um estilo popularizado como "impressionista". Sinta-se à vontade para navegar pelo site e conhecer melhor minhas pinturas!</p>
     </main>
 </body>
 </html>

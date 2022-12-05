@@ -214,7 +214,7 @@ a:hover {
     transition: 0.2s;
  }
 
- #main-login > form > input#inputenviar, #inputcadastrar {
+ #main-login > form > input#inputenviar, #inputcadastrar, #enviaremail {
    padding-left: 0px;
    height: 45px;
  }
@@ -224,12 +224,13 @@ a:hover {
    color: var(--cor2);
  }
 
- #main-login > form > input#inputenviar:hover, #inputcadastrar:hover {
+ #main-login > form > input#inputenviar:hover, #inputcadastrar:hover, #enviaremail:hover {
    background-color: rgb(63, 116, 63);
    color: var(--cor2);
+   cursor: pointer;
  }
 
- #main-login > form > input#inputenviar:active, #inputcadastrar:active {
+ #main-login > form > input#inputenviar:active, #inputcadastrar:active, #enviaremail:active {
    background-color: rgb(63, 116, 63);
    color: var(--cor2);
  }
@@ -244,7 +245,7 @@ a:hover {
 
  .disponibilidade {
    text-indent: 0;
-   font-size: 0.8em;
+   font-size: 0.7em;
    text-align: center;
    color: var(--cor4);
  }
@@ -259,7 +260,7 @@ a:hover {
  }
 
  .flex > div.bloco {
-   flex: 1 1 150px;
+   flex: 1 1 200px;
    margin: 10px;
  }
 
@@ -370,4 +371,102 @@ table tr th {
 table tr td {
    padding: 5px;
    color: var(--cor1);
+}
+
+.exito {
+   text-indent: 0px;
+   font-size: 1.2em;
+   font-weight: bold;
+   text-align: center;
+   color: var(--cor5);
+   background-color: rgb(86, 199, 120);
+   padding: 10px;
+}
+
+span.nomeobra {
+   font-size: 0.9em;
+   font-weight: bold;
+   color: var(--cor5);
+}
+
+main#main-contact {
+   display: flex;
+   align-items: center;
+   height: auto;
+   flex-direction: column;
+}
+
+div#insta {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background: linear-gradient(to left, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+   height: auto;
+   color: #fff;
+   margin-top: 50px;
+   border-radius: 10px;
+   margin-bottom: 50px;
+}
+
+div#insta > h2 {
+   color: #fff;
+   font-size: 2em;
+   padding: 20px;
+   margin: 0;
+}
+
+div#insta > img {
+   padding-left: 20px;
+}
+
+div#form-contact {
+   height: auto;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 390px;
+   width: 260px;
+   background-color: var(--cor3);
+   margin-bottom: 50px;
+}
+
+div#form-contact > form {
+   margin: auto;
+   padding: 10px;
+}
+
+div#form-contact > form > input {
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 240px;
+    margin-bottom: 10px;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    font-size: 1.02em;
+    padding-left: 15px;
+    transition: 0.2s;
+}
+
+div#form-contact > form > textarea {
+   border-radius: 2px;
+   outline: none;
+   border: none;
+   width: 240px;
+   height: 100px;
+   margin-bottom: 10px;
+   background-color: var(--cor2);
+   color: var(--cor5);
+   font-size: 1.02em;
+   padding-left: 15px;
+   padding-top: 15px;
+   transition: 0.2s;
+}
+
+div#form-contact > form > textarea:focus , div#form-contact > form > input:focus {
+   background-color: var(--cor4);
+   color: var(--cor2);
 }
